@@ -11,7 +11,7 @@ const InputForm = ({ setList }) => {
     const [name, setName] = useState("");
     const [tel, setTel] = useState("");
     const [memo, setMemo] = useState("");
-    const [group, setGroup] = useState(JSON.parse(localStorage.getItem("groups") || "[]")[0].groupName || "가족");
+    const [group, setGroup] = useState(JSON.parse(localStorage.getItem("groups") || "[]")?.[0]?.groupName || "가족");
 
     const [isNameValid, setIsNameValid] = useState(true);
     const [isTelValid, setIsTelValid] = useState(true);
